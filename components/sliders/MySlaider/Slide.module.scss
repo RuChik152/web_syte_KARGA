@@ -1,0 +1,80 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  top: 0px;
+  left: 0px;
+  padding: 3%;
+  z-index: 9999999999;
+  display: flex;
+  align-items: center;
+  .wrapper {
+    display: flex;
+    width: 650px;
+    overflow: hidden;
+    margin: 2% auto;
+    border-radius: 3px;
+    box-shadow: 0px 0px 20px 9px rgb(255 255 255 / 20%);
+    @include _1170 {
+      width: 59vw;
+      margin: 6% auto;
+    }
+    @include _768 {
+      height: fit-content;
+      width: 75vw !important;
+      margin: 20% auto;
+    }
+    .close__btn {
+      color: #707070c7;
+      position: fixed;
+      font-size: 3em;
+      z-index: 1;
+      top: 2%;
+      left: 1%;
+      width: 17%;
+      height: 8%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      &:hover{
+        color: $color_arrow_hover;
+      }
+      &:active {
+        color: $color_arrow_active;
+      }
+    }
+    .main {
+      width: 650px;
+      display: flex;
+      margin: 0 auto;
+      padding: 0;
+      @include _1170 {
+        width: 59Vw;
+        height: 400px;
+      }
+      @include _768 {
+        width: 75Vw;
+        height: 400px;
+      }
+      .item__img{
+        .img {
+          @include _1170 {
+            width: fit-content;
+            width: 59vw;
+            height: 403px;
+          }
+          @include _768 {
+            width: fit-content;
+            width: 75vw;
+            height: 400px;
+          }
+        }
+      }
+    }
+  }
+}
+

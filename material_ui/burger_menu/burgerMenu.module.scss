@@ -1,0 +1,144 @@
+@import "../../styles/mixins";
+
+.main {
+  display: none;
+  @include _768 {
+    display: block;
+    position: relative;
+  }
+  .main__logo {
+    width: 20%;
+    height: fit-content;
+    left: 15px;
+    top: 14px;
+    position: absolute;
+  }
+  .main__btn {
+    width: 25%;
+    position: absolute;
+    right: 0px;
+    top: 19px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    .btn__icon {
+      width: 60px;
+      height: 60px;
+      opacity: 0.6;
+    }
+    .icon__btn {
+      width: 100%;
+      height: 11vh;
+      .btn__one {
+        fill: white;
+        transform: rotate(0) translate(0px, 0px);
+        transition: 0.5s ease-in-out;
+      }
+      .btn__one__active {
+        fill: white;
+        transform: rotate(45deg) translate(31%, -27%);
+        transition: 0.5s ease-in-out;
+      }
+      .btn__two {
+        fill: white;
+        opacity: 1;
+        transition: 0.5s ease-in-out;
+      }
+      .btn__two__active {
+        fill: white;
+        opacity: 0;
+        transition: 0.5s ease-in-out;
+      }
+      .btn__three {
+        fill: white;
+        transition: 0.5s ease-in-out;
+      }
+      .btn__three__active {
+        fill: white;
+        transition: 0.5s ease-in-out;
+        transform: rotate(-45deg) translate(-47%, 5%);
+      }
+    }
+  }
+  .main__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 5em;
+    background-color: #ffffffb3;
+    margin: 0 0 0 -40px;
+    overflow: hidden;
+    height: 0px;
+    transition: 0.5s ease-in-out;
+    justify-content: center;
+    .list__item {
+      display: flex;
+      .item__link {
+        color: #5e5e5e;
+        font-size: 13vw;
+      }
+    }
+  }
+  .main__list__not {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 5em;
+    background-color: #ffffffb3;
+    margin: 0 0 0 -40px;
+    overflow: hidden;
+    height: 96vw;
+    transition: 0.5s ease-in-out;
+    justify-content: center;
+    .list__item {
+      display: flex;
+      .item__link {
+        color: #5e5e5e;
+        font-size: 13vw;
+      }
+    }
+  }
+}
+
+.svg {
+  width: 23%;
+  height: 13vh;
+  position: absolute;
+  left: 17px;
+  top: 17px;
+  .svg__radius__1 {
+    fill: white;
+    transform-origin: center;
+    animation-name: rotation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  .svg__radius__2 {
+    fill: white;
+    transform-origin: center;
+    animation-name: rotation2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+}
+
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

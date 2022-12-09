@@ -1,0 +1,129 @@
+@import "./mixins";
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  background-color: #b1c9f5;
+  border: 1px solid black;
+  padding: 6% 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .logo__block {
+    width: 48%;
+    display: flex;
+    @include _768 {
+      display: none;
+    }
+    .svg {
+      width: 61%;
+      opacity: 0.8;
+    }
+  }
+  .form__wrapper {
+    background-color: #b3b3b342;
+    width: 34vw;
+    height: 67vh;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 0px 18px 0px rgb(0 0 0 / 12%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    @include _768 {
+      width: 60vw;
+      height: 73vh;
+    }
+    @include _516 {
+      width: 85vw;
+    }
+    .mail {
+      position: absolute;
+      top: 2%;
+      right: 3%;
+      font-size: 1rem;
+    }
+    .form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .form__label{
+        width: 68%;
+        font-size: 20px;
+        text-transform: capitalize;
+        @include _350 {
+          font-size: 14px;
+        }
+      }
+      .input {
+        width: 68%;
+        height: 47px;
+        border: none;
+        outline: none;
+        border-radius: 4px;
+        padding: 14px;
+        color: #396e5c;
+        background: #ffffffbd;
+        transition: 0.4s linear;
+        &::placeholder {
+          opacity: 0.4;
+        }
+        &:focus {
+          box-shadow: inset 0px 0px 4px 3px rgb(0 0 0 / 20%);
+        }
+        &:hover {
+          box-shadow: inset 0px 0px 6px 3px rgb(0 0 0 / 48%);
+        }
+      }
+      .textarea {
+        height: 27vh;
+      }
+      .btn {
+        padding: 1%;
+        border-radius: 4px;
+        border: none;
+        font-size: 15px;
+        margin: 7px 0 0 0;
+        width: 23%;
+        height: 11%;
+      }
+    }
+  }
+}
+
+.svg__radius__1 {
+  fill: white;
+  transform-origin: center;
+  animation-name: rotation;
+  animation-duration: 45s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.svg__radius__2 {
+  fill: white;
+  transform-origin: center;
+  animation-name: rotation2;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

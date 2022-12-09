@@ -1,0 +1,49 @@
+@import "../../../styles/mixins";
+.wrapper{
+  .main {
+    display: flex;
+    justify-content: space-evenly;
+    @include _1170 {
+      padding: 0;
+    }
+    .item {
+      display: block;
+      width: 22%;
+      position: relative;
+      &:hover {
+        box-shadow: 0px 0px 20px 3px rgb(255 255 255 / 20%);
+      }
+      .item__span {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #FFFFFF00;
+        transition: 0.5s linear;
+        cursor: pointer;
+        &:before {
+          content: '\21E7';
+          position: absolute;
+          top: 38%;
+          left: 44%;
+          color: azure;
+          font-size: 3em;
+          opacity: 0;
+          transform: translateY(50%);
+          transition: 0.5s linear;
+        }
+        &:hover {
+          background-color: #FFFFFF77;
+          &:before {
+            opacity: 1;
+            transform: translateY(0%);
+          }
+        }
+
+      }
+      .img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

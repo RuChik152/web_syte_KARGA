@@ -1,0 +1,39 @@
+@import "../styles/mixins";
+
+.modal {
+  background-color: rgb(26 26 26);
+  width: 100vw;
+  height: 106vh;
+  position: fixed;
+  z-index: 5;
+  top: -26px;
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  .modal__video {
+
+    @include _516 {
+      margin-top: 0%;
+    }
+  }
+  .modal__btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+  }
+  .modal__btn__desktop {
+    position: absolute;
+    top: 6%;
+    left: 1%;
+    font-size: 2em;
+    @include _1170 {
+      display: none;
+    }
+  }
+
+}
