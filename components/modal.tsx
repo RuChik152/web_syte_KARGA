@@ -26,7 +26,7 @@ const Modal = (props: any) => {
     return (
         <div className={style.modal} style={{width: screenWidth, height: screenHeight}}>
             <video className={style.modal__video} autoPlay={false} loop={false} muted={true} controls={true} style={{width: screenWidth}} >
-                <source src="/video/demo_modal.mp4" type="video/mp4"/>
+                <source src="/video/teasers.mp4" type="video/mp4"/>
             </video>
             <button className={style.modal__btn} onClick={props.onClose}>X</button>
             <button className={cn([`${style.modal__btn} ${style.modal__btn__desktop}`])} onClick={props.onClose}>X</button>
