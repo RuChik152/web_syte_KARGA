@@ -31,7 +31,11 @@ export default function Home() {
         const width = window.outerWidth;
         setWidthWindow(width)
         setHeightWindow(height)
-        console.log('resize');
+        if(window.matchMedia("only screen and (max-width: 760px)").matches) {
+            document.getElementsByTagName("body")[0].style.overflow="hidden";
+        } else {
+            document.getElementsByTagName("body")[0].style.overflow="visible";
+        }
     }
 
 
@@ -42,6 +46,9 @@ export default function Home() {
         setHeightWindow(height);
         setWidthWindow(width);
         window.addEventListener('resize', whichSizeScreen);
+        if(window.matchMedia("only screen and (max-width: 760px)").matches) {
+            document.getElementsByTagName("body")[0].style.overflow="hidden";
+        }
     },[])
 
 
