@@ -77,15 +77,15 @@ export default function Home() {
       console.log('diff--info', diff);
       if(diff > 5) {
 
-          window.scrollBy({top: heightWindow, behavior: 'smooth'});
-          console.log('diff-', diff < -30);
+          window.scrollTo({top: heightWindow, behavior: 'smooth'});
+          console.log('diff-', diff < -3);
 
 
       }
 
       if(diff < -5) {
-          window.scrollBy({top: heightWindow * (-1), behavior: 'smooth'});
-          console.log('diff', diff > 30);
+          window.scrollTo({top: heightWindow * (-1), behavior: 'smooth'});
+          console.log('diff', diff > 3);
       }
 
       setTouchWindowPosition(null);
