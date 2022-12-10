@@ -1,9 +1,8 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useContext, useEffect, useRef, useState} from 'react';
 import {SliderContext} from "./Sliders";
 import Image from "next/image";
 import style from "./Slide.module.scss";
 import Arrow from "./Arrow";
-
 
 const img_params = {
     width: 650,
@@ -11,15 +10,20 @@ const img_params = {
 }
 
 const Slide = () => {
+
     const {slide, list, setSlide} = useContext(SliderContext)
+
 
     const [position, setPosition] = useState(0)
     const [width, setWidth] = useState(img_params.width)
     const [currentPosition, setCurrentPosition] = useState(1)
     const [touchPosition, setTouchPosition] = useState(null)
 
-    useEffect(() => {
-    },[position])
+
+    if(slide == null) {
+        return null
+    }
+
 
     const handleTouchStart = (e:any) => {
         const touchDown = e.touches[0].clientX
@@ -33,6 +37,7 @@ const Slide = () => {
         setSlide(null);
     }
 
+    //TODO TypeScript
     const handleTouchMove = (e: any) => {
         const touchDown = touchPosition
 
@@ -82,12 +87,8 @@ const Slide = () => {
 
 
 
-    if(slide == null) {
-        return null
-    }
-
     return (
-        <div className={style.container}>
+        <div id="slider" className={style.container}>
             <div className={style.wrapper}>
                 <button className={style.close__btn} onClick={close} >X</button>
                 <Arrow nextSlide={ nextPosition } backSlide={ backPosition } currentPosition={currentPosition}/>

@@ -2,7 +2,10 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "browserslist": ["defaults and supports es6-module","maintained node versions"],
+  "browserslist": [
+    "defaults and supports es6-module",
+    "maintained node versions"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,6 +13,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.1",
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.9",
@@ -25,8 +29,10 @@
     "react": "18.2.0",
     "react-alice-carousel": "^2.6.6",
     "react-dom": "18.2.0",
+    "react-redux": "^8.0.5",
     "react-slick": "^0.29.0",
     "react-window": "^1.8.8",
+    "redux": "^4.2.0",
     "remark": "^14.0.2",
     "remark-html": "^15.0.1",
     "sass": "^1.56.1",
