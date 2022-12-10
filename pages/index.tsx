@@ -78,14 +78,14 @@ export default function Home() {
       if(diff > 5) {
 
           window.scrollBy({top: heightWindow, behavior: 'smooth'});
-          console.log('diff-', diff < -1);
+          console.log('diff-', diff < -30);
 
 
       }
 
       if(diff < -5) {
           window.scrollBy({top: heightWindow * (-1), behavior: 'smooth'});
-          console.log('diff', diff > 1);
+          console.log('diff', diff > 30);
       }
 
       setTouchWindowPosition(null);
