@@ -7,6 +7,7 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 import bg from "../../public/images/sky.png";
 import {bulletText} from '../../lib/mock_data';
 import Bullet from "./bullet/bullet";
+import cn from "classnames";
 
 const img_params = {
     width: 500,
@@ -44,17 +45,22 @@ const Description = () => {
     return (
         <div className={style.main}>
             <div style={styled} className={style.bg}></div>
-            <div  id="about" className={style.wrapper__text}>
+            <section id="about" className={cn([`${style.wrapper__text} section`])} >
                 <h2 className={style.tittle}>Just start <em>playing</em> and <em>find</em> out my secret</h2>
                 <p className={style.desc}>We are &apos;BELIVR&apos; - a young game&apos;s developer. We present our first project and enter the gaming industry with the fantasy VR shooter &apos;Karga&apos;</p>
-                <div className={style.bullet__container}>
-                    <Bullet src="/images/bullet/elements.svg" text={bulletText[0].text} width={widthHeightImg.width} height={widthHeightImg.height}/>
-                    <Bullet src="/images/bullet/karga.png" text={bulletText[1].text} width={widthHeightImg.width} height={widthHeightImg.height}/>
-                    <Bullet src="/images/bullet/hero.png" text={bulletText[2].text} width={widthHeightImg.width} height={widthHeightImg.height}/>
-                    <Bullet src="/images/bullet/Skeleton.png" text={bulletText[3].text} width={widthHeightImg.width} height={widthHeightImg.height}/>
-                </div>
-            </div>
-
+            </section>
+            <section className="section" >
+                <Bullet src="/images/bullet/elements.svg" text={bulletText[0].text} width={widthHeightImg.width} height={widthHeightImg.height}/>
+            </section>
+            <section className="section" >
+                <Bullet src="/images/bullet/karga.png" text={bulletText[1].text} width={widthHeightImg.width} height={widthHeightImg.height}/>
+            </section>
+            <section className="section" >
+                <Bullet src="/images/bullet/hero.png" text={bulletText[2].text} width={widthHeightImg.width} height={widthHeightImg.height}/>
+            </section>
+            <section className="section" >
+                <Bullet src="/images/bullet/Skeleton.png" text={bulletText[3].text} width={widthHeightImg.width} height={widthHeightImg.height}/>
+            </section>
         </div>
     );
 };

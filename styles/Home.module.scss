@@ -143,6 +143,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @include _768 {
+    padding:0;
+  }
 }
 
 .footer {
