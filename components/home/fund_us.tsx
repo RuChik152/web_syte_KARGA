@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const FundUs = () => {
     return (
-        <div className={style.main} >
+        <div style={{height: "100vh"}} className={style.main} >
             <h2 id="contacts" className={style.tittle}>Join us! It will only take a minute</h2>
             <ul className={style.list}>
                 <Link href="https://www.facebook.com/profile.php?id=100088417534045" target="_blank">

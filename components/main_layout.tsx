@@ -20,7 +20,7 @@ const MainLayout: MainLayoutProps = ({children}) => {
             {/*    </div>*/}
             {/*)}*/}
             {children}
-          <Footer/>
+          {/*<Footer/>*/}
         </>
     );
 };

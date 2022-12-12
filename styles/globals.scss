@@ -145,7 +145,8 @@ a {
   }
 }
 
-.section {
-  position: relative;
-  height: 100vh;
+.only-desktop {
+  @include _768 {
+    display: none;
+  }
 }
