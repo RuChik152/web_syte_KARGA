@@ -2,6 +2,7 @@
 
 .main {
   display: none;
+  transition: 1s linear;
   @include _768 {
     display: block;
     position: relative;
@@ -21,6 +22,7 @@
     cursor: pointer;
     background: none;
     border: none;
+    transition: 1s linear;
     .btn__icon {
       width: 60px;
       height: 60px;
@@ -59,6 +61,11 @@
         transform: rotate(-45deg) translate(-47%, 5%);
       }
     }
+  }
+  .main__btn__scroll {
+    width: 14%;
+    top: -14px;
+    transition: 1s linear;
   }
   .main__list {
     display: flex;
@@ -100,12 +107,43 @@
   }
 }
 
+.main__hidden {
+  top: -59px;
+  transition: 1s linear;
+}
+
 .svg {
   width: 23%;
   height: 13vh;
   position: absolute;
   left: 17px;
   top: 17px;
+  transition: 1s ease-in-out;
+  //.svg__radius__1 {
+  //  fill: white;
+  //  transform-origin: center;
+  //  animation-name: rotation;
+  //  animation-duration: 10s;
+  //  animation-iteration-count: infinite;
+  //  animation-timing-function: linear;
+  //}
+  .svg__radius__2 {
+    fill: white;
+    transform-origin: center;
+    animation-name: rotation2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+}
+
+.svg__scroll {
+  width: 12%;
+  left: 5px;
+  top: -17px;
+  height: 13vh;
+  position: absolute;
+  transition: 1s linear;
   .svg__radius__1 {
     fill: white;
     transform-origin: center;
@@ -125,14 +163,15 @@
 }
 
 
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
+
+//@keyframes rotation {
+//  0% {
+//    transform: rotate(0deg);
+//  }
+//  100% {
+//    transform: rotate(360deg);
+//  }
+//}
 
 @keyframes rotation2 {
   0% {
@@ -141,4 +180,15 @@
   100% {
     transform: rotate(0deg);
   }
+}
+
+.sticky {
+  width: 100%;
+  margin: 0px auto 0 auto;
+  padding: 0 0 0 0;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  background-color: #30303699;
+  transition: 0.5s ease-in-out;
 }

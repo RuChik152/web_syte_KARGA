@@ -13,18 +13,24 @@ const FundUs = () => {
                         <h5 className={style.item__name} >facebook</h5>
                     </li>
                 </Link>
-                <li className={style.list__item}>
-                    <Image className={style.item__img} src="/images/steam.svg" alt="steam_logo" width={64} height={64}/>
-                    <h5 className={style.item__name}>steam</h5>
-                </li>
-                <li className={style.list__item}>
-                    <Image className={style.item__img} src="/images/psvr.svg" alt="PSVR_logo" width={64} height={64}/>
-                    <h5 className={style.item__name}>PSVR</h5>
-                </li>
-                <li className={style.list__item}>
-                    <Image className={style.item__img} src="/images/discord.svg" alt="DISCORD_logo" width={64} height={64}/>
-                    <h5 className={style.item__name}>DISCORD</h5>
-                </li>
+                <Link href="#">
+                    <li className={style.list__item}>
+                        <Image className={style.item__img} src="/images/steam.svg" alt="steam_logo" width={64} height={64}/>
+                        <h5 className={style.item__name}>steam</h5>
+                    </li>
+                </Link>
+                <Link href="#">
+                    <li className={style.list__item}>
+                        <Image className={style.item__img} src="/images/psvr.svg" alt="PSVR_logo" width={64} height={64}/>
+                        <h5 className={style.item__name}>PSVR</h5>
+                    </li>
+                </Link>
+                    <Link href="#">
+                    <li className={style.list__item}>
+                        <Image className={style.item__img} src="/images/discord.svg" alt="DISCORD_logo" width={64} height={64}/>
+                        <h5 className={style.item__name}>DISCORD</h5>
+                    </li>
+                </Link>
             </ul>
         </div>
     );

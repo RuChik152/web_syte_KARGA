@@ -32,9 +32,10 @@ const widthHeightImg = {
 
 const Description = () => {
     const styled = {
-        backgroundImage: `url(${bg.src})`,
+        // backgroundImage: `url(${bg.src})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
+        // background: 'linear-gradient(220deg, rgba(255,255,255,1) 0%, rgba(179,216,233,1) 12%, rgba(70,195,255,1) 26%, rgba(204,238,255,1) 47%, rgba(48,166,236,1) 65%, rgba(23,159,250,1) 78%, rgba(166,219,255,1) 90%, rgba(0,146,255,1) 100%)',
     }
 
     useEffect(() => {

@@ -3,15 +3,21 @@
   .main {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     @include _1170 {
       padding: 0;
     }
     .item {
       display: block;
-      width: 22%;
+      width: 20%;
       position: relative;
+      margin: 11px 8px;
+      box-shadow: 0px 0px 20px 10px rgb(0 0 0 / 20%);
+      border-radius: 7px;
+      opacity: 0.7;
       &:hover {
-        box-shadow: 0px 0px 20px 3px rgb(255 255 255 / 20%);
+        box-shadow: 0px 0px 20px 10px rgb(0 0 0 / 20%);
+
       }
       .item__span {
         position: absolute;
@@ -20,6 +26,7 @@
         background-color: #FFFFFF00;
         transition: 0.5s linear;
         cursor: pointer;
+        border-radius: 7px;
         &:before {
           content: '\21E7';
           position: absolute;
@@ -43,6 +50,7 @@
       .img {
         width: 100%;
         height: 100%;
+        border-radius: 6px;
       }
     }
   }
