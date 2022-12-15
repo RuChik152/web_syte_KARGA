@@ -12,10 +12,10 @@ const Footer = () => {
                 Contact as
             </Link>
             <div className={style.docs} >
-                <Link className={style.docs__link} href="#">
+                <Link className={style.docs__link} href="/privat_policy">
                     Privacy Policy
                 </Link>
-                <Link className={style.docs__link} href="#">
+                <Link className={style.docs__link} href="/terms_and_conditions">
                     Terms of use
                 </Link>
             </div>
