@@ -1,7 +1,12 @@
+@import "mixins";
+
 .main {
   max-width: 90vw;
   margin: 7% auto 0 auto;
   color: #424242;
+  @include _768 {
+    margin: 25% auto 0 auto;
+  }
   .title {
     font-size: 4em;
   }
