@@ -11,19 +11,19 @@ const TermsAndConditions = () => {
             </div>
             <div className={style.block}>
                 <h3 className={style.block__h3}>2. Use License</h3>
-                <p className={style.block__p}>Permission is granted to temporarily download one copy of the materials on BeliVR's Website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:</p>
+                <p className={style.block__p}>Permission is granted to temporarily download one copy of the materials on BeliVR&#39;s Website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:</p>
                 <ul className={style.block__list}>
                     <li className={style.list__item}>modify or copy the materials;</li>
                     <li className={style.list__item}>use the materials for any commercial purpose or for any public display;</li>
-                    <li className={style.list__item}>attempt to reverse engineer any software contained on BeliVR's Website;</li>
+                    <li className={style.list__item}>attempt to reverse engineer any software contained on BeliVR&#39;s Website;</li>
                     <li className={style.list__item}>remove any copyright or other proprietary notations from the materials;</li>
-                    <li className={style.list__item}>transferring the materials to another person or "mirror" the materials on any other server</li>
+                    <li className={style.list__item}>transferring the materials to another person or &#34;mirror&#34; the materials on any other server</li>
                     <p className={style.block__p}>This will let BeliVR to terminate upon violations of any of these restrictions. Upon termination, your viewing right will also be terminated and you should destroy any downloaded materials in your possession whether it is printed or electronic format. These Terms of Service has been created with the help of the Terms Of Service Generator.</p>
                 </ul>
             </div>
             <div className={style.block}>
                 <h3 className={style.block__h3}>3. Disclaimer</h3>
-                <p className={style.block__p}>All the materials on BeliVR’s Website are provided "as is". BeliVR makes no warranties, may it be expressed or implied, therefore negates all other warranties. Furthermore, BeliVR does not make any representations concerning the accuracy or reliability of the use of the materials on its Website or otherwise relating to such materials or any sites linked to this Website.</p>
+                <p className={style.block__p}>All the materials on BeliVR’s Website are provided &#34;as is&#34;. BeliVR makes no warranties, may it be expressed or implied, therefore negates all other warranties. Furthermore, BeliVR does not make any representations concerning the accuracy or reliability of the use of the materials on its Website or otherwise relating to such materials or any sites linked to this Website.</p>
             </div>
             <div className={style.block}>
                 <h3 className={style.block__h3}>4. Limitations</h3>
@@ -47,7 +47,7 @@ const TermsAndConditions = () => {
             </div>
             <div className={style.block}>
                 <h3 className={style.block__h3}>9. Governing Law</h3>
-                <p className={style.block__p}>Any claim related to BeliVR's Website shall be governed by the laws of us without regards to its conflict of law provisions</p>
+                <p className={style.block__p}>Any claim related to BeliVR&#39;s Website shall be governed by the laws of us without regards to its conflict of law provisions</p>
             </div>
         </div>
     );
