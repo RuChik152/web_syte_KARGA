@@ -89,7 +89,11 @@ const Slide = () => {
     return (
         <div className={style.container}>
             <div className={style.wrapper}>
-                <button className={style.close__btn} onClick={close} >X</button>
+                <button className={style.close__btn} onClick={close}>
+                    <svg className={style.close__btn__img} width="20" height="20" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0318 2.14347L7.78917 6.38611L12.0318 10.6287L10.6176 12.043L6.37496 7.80032L2.13232 12.043L0.718104 10.6287L4.96075 6.38611L0.718104 2.14347L2.13232 0.729254L6.37496 4.97189L10.6176 0.729254L12.0318 2.14347Z" fill="#F1A738"/>
+                    </svg>
+                </button>
                 <Arrow nextSlide={ nextPosition } backSlide={ backPosition } currentPosition={currentPosition}/>
                 <ul onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} style={{ transform: `translateX(${position}%)`, transition: '1s ease-in-out'}} className={style.main} >
                     <li className={style.item__img}>

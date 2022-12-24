@@ -11,11 +11,13 @@ const Modal = (props: any) => {
         setScreenHeight(window.innerHeight + 25)
     }
 
-    useEffect(() => {
 
+
+    useEffect(() => {
         setScreenWidth(window.innerWidth)
         setScreenHeight(window.innerHeight + 30)
-        window.document.addEventListener('resize', resizeScreen);
+        window.addEventListener('resize', resizeScreen);
+
     },[])
 
 
@@ -25,11 +27,15 @@ const Modal = (props: any) => {
 
     return (
         <div className={style.modal} style={{width: screenWidth, height: screenHeight}}>
-            <video className={style.modal__video} autoPlay={false} loop={false} muted={true} controls={true} style={{width: screenWidth}} >
+            <video id="myvideo" className={style.modal__video} autoPlay={true} loop={false} muted={false} controls={true} style={{width: screenWidth}} >
                 <source src="/video/teaser_master.mp4" type="video/mp4"/>
             </video>
-            <button className={style.modal__btn} onClick={props.onClose}>X</button>
-            <button className={cn([`${style.modal__btn} ${style.modal__btn__desktop}`])} onClick={props.onClose}>X</button>
+            {/*<button className={style.modal__btn} onClick={props.onClose}>X</button>*/}
+            <button className={cn([`${style.modal__btn} ${style.modal__btn__desktop}`])} onClick={props.onClose}>
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0318 2.14347L7.78917 6.38611L12.0318 10.6287L10.6176 12.043L6.37496 7.80032L2.13232 12.043L0.718104 10.6287L4.96075 6.38611L0.718104 2.14347L2.13232 0.729254L6.37496 4.97189L10.6176 0.729254L12.0318 2.14347Z" fill="#F1A738"/>
+                </svg>
+            </button>
         </div>
     );
 };

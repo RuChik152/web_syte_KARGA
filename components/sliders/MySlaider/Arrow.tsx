@@ -50,7 +50,7 @@ const Arrow = (props: any) => {
     }
 
     return (
-        <div>
+        <div className={style.main}>
             {props.currentPosition != 1 && <button onClick={props.backSlide} className={style.up} disabled={props.currentPosition == 1} style={{ top: correctTop() }} ></button>}
             {props.currentPosition != list.length && <button onClick={props.nextSlide} className={style.down} disabled={props.currentPosition == list.length} style={{ top: correctTop() }} ></button>}
         </div>
