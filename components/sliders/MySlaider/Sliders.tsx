@@ -18,19 +18,19 @@ export const SliderContext: React.Context<SlideContextProps> = createContext();
 export const initList = [
     {
         id: 1,
-        src: '/images/desc/demo1.jpg'
+        src: '/images/screenshots/new/tech_1.jpg'
     },
     {
         id: 2,
-        src: '/images/desc/demo2.jpg'
+        src: '/images/screenshots/new/tech_2.jpg'
     },
     {
         id: 3,
-        src: '/images/desc/demo3.jpg'
+        src: '/images/screenshots/new/tech_3.jpg'
     },
     {
         id: 4,
-        src: '/images/desc/demo4.jpg'
+        src: '/images/screenshots/new/tech_4.jpg'
     },
     {
         id: 5,

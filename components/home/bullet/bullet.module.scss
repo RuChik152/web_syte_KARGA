@@ -2,10 +2,10 @@
 
 .main {
   display: flex;
-  width: 34vw;
-  height: 200px;
+  width: 22vw;
   align-items: center;
   margin: 6% 0 15px 0;
+  flex-direction: column;
   @include _1170 {
     width: 60vw;
   }
@@ -18,10 +18,11 @@
     margin: 36px 0;
   }
   .main__img {
-
-    //filter: drop-shadow(2px 2px 100px white) blur(0.8px);
+    width: 29vw;
+    height: 57vh;
     @include _1170 {
-
+      width: 100%;
+      height: auto;
     }
     @include _768 {
 
@@ -33,12 +34,22 @@
 
     }
   }
+  .main__name{
+    font-family: 'Znak Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 45px;
+    text-transform: capitalize;
+  }
   .main__text {
-    color: #1e1800;
-    display: inline-block;
-    text-align: left;
-    margin-left: 40px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
     font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #FFFFFF;
     @include _1170 {
       font-size: 17px;
     }

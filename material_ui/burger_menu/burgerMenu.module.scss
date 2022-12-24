@@ -1,7 +1,9 @@
 @import "../../styles/mixins";
+@import "../../styles/variables";
 
 .main {
   display: none;
+  transition: 1s linear;
   @include _768 {
     display: block;
     position: relative;
@@ -21,6 +23,7 @@
     cursor: pointer;
     background: none;
     border: none;
+    transition: 1s linear;
     .btn__icon {
       width: 60px;
       height: 60px;
@@ -30,74 +33,112 @@
       width: 100%;
       height: 11vh;
       .btn__one {
-        fill: white;
+        fill: $color_gold;
         transform: rotate(0) translate(0px, 0px);
         transition: 0.5s ease-in-out;
       }
       .btn__one__active {
-        fill: white;
+        fill: $color_gold_active;
         transform: rotate(45deg) translate(31%, -27%);
         transition: 0.5s ease-in-out;
       }
       .btn__two {
-        fill: white;
+        fill: $color_gold;
         opacity: 1;
         transition: 0.5s ease-in-out;
       }
       .btn__two__active {
-        fill: white;
+        fill: $color_gold_active;
         opacity: 0;
         transition: 0.5s ease-in-out;
       }
       .btn__three {
-        fill: white;
+        fill: $color_gold;
         transition: 0.5s ease-in-out;
       }
       .btn__three__active {
-        fill: white;
+        fill: $color_gold_active;
         transition: 0.5s ease-in-out;
         transform: rotate(-45deg) translate(-47%, 5%);
       }
     }
   }
+  .main__btn__scroll {
+    width: 14%;
+    top: -14px;
+    transition: 1s linear;
+  }
   .main__list {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     font-size: 5em;
-    background-color: #ffffffb3;
+    background-color: #000000;
     margin: 0 0 0 -40px;
     overflow: hidden;
     height: 0px;
     transition: 0.5s ease-in-out;
-    justify-content: center;
+    justify-content: flex-start;
     .list__item {
       display: flex;
+      width: 100vw;
+      height: 80px;
+      align-items: center;
+      padding-left: 76px;
       .item__link {
-        color: #5e5e5e;
-        font-size: 13vw;
+        font-family: 'Raleway';
+        text-transform: uppercase;
+        color: #F1A738;
+        font-size: 6vw;
+
       }
     }
   }
   .main__list__not {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     font-size: 5em;
-    background-color: #ffffffb3;
+    background-color: #000000;
     margin: 0 0 0 -40px;
     overflow: hidden;
-    height: 96vw;
+    height: 100vh;
     transition: 0.5s ease-in-out;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-top: 30%;
     .list__item {
       display: flex;
+      width: 100vw;
+      height: 80px;
+      align-items: center;
+      padding-left: 76px;
       .item__link {
-        color: #5e5e5e;
-        font-size: 13vw;
+        font-family: 'Raleway';
+        text-transform: uppercase;
+        color: #F1A738;
+        font-size: 6vw;
       }
     }
   }
+  .block__contact {
+    display: flex;
+    box-shadow: 0px 0px 6px 5px rgb(0 0 0 / 20%);
+    padding: 0;
+    margin-bottom: 65px;
+    justify-content: space-around;
+    border: 2px solid;
+    border-image-slice: 1;
+    svg {
+      @include _768 {
+        width: 24vw;
+      }
+    }
+  }
+}
+
+.main__hidden {
+  top: -59px;
+  transition: 1s linear;
 }
 
 .svg {
@@ -106,6 +147,32 @@
   position: absolute;
   left: 17px;
   top: 17px;
+  transition: 1s ease-in-out;
+  //.svg__radius__1 {
+  //  fill: white;
+  //  transform-origin: center;
+  //  animation-name: rotation;
+  //  animation-duration: 10s;
+  //  animation-iteration-count: infinite;
+  //  animation-timing-function: linear;
+  //}
+  .svg__radius__2 {
+    fill: white;
+    transform-origin: center;
+    animation-name: rotation2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+}
+
+.svg__scroll {
+  width: 12%;
+  left: 5px;
+  top: -17px;
+  height: 13vh;
+  position: absolute;
+  transition: 1s linear;
   .svg__radius__1 {
     fill: white;
     transform-origin: center;
@@ -124,15 +191,23 @@
   }
 }
 
-
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.list__item__active {
+  background-image: url("../../public/images/burger/BG_BURGER.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
+
+
+//@keyframes rotation {
+//  0% {
+//    transform: rotate(0deg);
+//  }
+//  100% {
+//    transform: rotate(360deg);
+//  }
+//}
 
 @keyframes rotation2 {
   0% {
@@ -141,4 +216,19 @@
   100% {
     transform: rotate(0deg);
   }
+}
+
+.sticky {
+  width: 100%;
+  margin: 0px auto 0 auto;
+  padding: 0 0 0 0;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  background-color: #30303699;
+  transition: 0.5s ease-in-out;
+}
+
+.block__contact {
+
 }

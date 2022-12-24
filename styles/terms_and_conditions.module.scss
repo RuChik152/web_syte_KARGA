@@ -1,0 +1,27 @@
+@import "mixins";
+@import "variables";
+
+.main {
+  max-width: 90vw;
+  margin: 7% auto 0 auto;
+  color: $color_text_grey;
+  @include _768 {
+    margin: 25% auto 0 auto;
+  }
+  .title {
+    font-size: 4em;
+  }
+  .block {
+    .block__h3 {
+      font-size: 2em;
+    }
+    .block__p {
+      font-size: 1em;
+    }
+    .block__list {
+      .list__item {
+        font-size: 1em;
+      }
+    }
+  }
+}

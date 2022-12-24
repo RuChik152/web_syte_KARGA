@@ -6,6 +6,8 @@ class MyDocument extends Document {
             <Html>
                 <Head>
                     <html lang="en" />
+                    {/*TODO Next*/}
+                    {/* eslint-disable-next-line @next/next/no-title-in-document-head */}
                     <title>Karga</title>
                     <meta name="description" content="Karga Game" />
                     <meta name="viewport" content="initial-scale=1.0, width=device-width viewport-fit=content"/>

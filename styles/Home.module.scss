@@ -62,27 +62,34 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    margin-top: 0px;
   }
   button {
     margin: 0 10px 0 10px;
   }
   .btn {
     padding: 1% 2%;
-    border: none;
-    border-radius: 56px;
+    //border-radius: 56px;
     text-transform: uppercase;
-    font-size: 14px;
+    //font-size: 14px;
     line-height: 1em;
     letter-spacing: 1px;
     text-align: center;
-    background-color: #f54334;
-    border: 3px #f54334 solid;
+    //background-color: #f54334;
+    //background-image: url("../public/images/left_btn.svg");
+    //border: 3px #f54334 solid;
+    border-image-source: url("../public/images/left_btn.svg");
+    border-image-outset: 15px;
+    border-image-repeat: stretch;
+    border-image-slice: 30;
+    border-image-width: 30px;
     cursor: pointer;
     height: fit-content;
-    transition: 1s ease-in-out;
+    //transition: 1s ease-in-out;
+    background: none;
     &:hover{
-      background-color: #ff2513;
-      border: 3px #FF2513FF solid;
+      //background-color: #ff2513;
+      //border: 3px #FF2513FF solid;
     }
     @include _979 {
       width: 160px;
@@ -145,21 +152,6 @@
   align-items: center;
 }
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
 
 .title a {
   color: #0070f3;
@@ -190,15 +182,20 @@
     @include _480 () {
 
     }
+    .title__first__img {
+      @include _768 {
+        width: 77vw;
+        height: fit-content;
+      }
+    }
   }
   .title__second {
-    color: black;
     font-size: 22px;
-    margin: 0;
-    color: aliceblue;
+    color: #FFFFFF;
     text-transform: uppercase;
     margin-top: 25px;
     display: inline-block;
+    font-family: 'Raleway', serif;
     @include _768 {
       font-size: 30px;
     }
@@ -348,12 +345,33 @@
 
 .screenshots__wrapper {
   padding: 4%;
-  background-color: #00000038;
+  //background-color: rgba(255, 255, 255, 0);
+
+
   display: flex;
   flex-direction: column;
   padding: 2% 4% 5% 4%;
   .screenshots__wrapper__text {
+    background-image: url("../public/images/slider/BG_SLIDER_TEXT.png");
+    background-repeat: no-repeat;
+    background-size: revert;
+    background-position: top;
+    font-family: "Znak Mono";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 107px;
+    letter-spacing: -0.02em;
+    text-transform: capitalize;
+    color: #FFFFFF;
     text-align: center;
-    font-size: 3em;
+    height: 317px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 0 0 0 0;
+    @include _768 () {
+      font-size: 12vw;
+    }
   }
 }

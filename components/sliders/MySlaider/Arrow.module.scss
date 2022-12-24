@@ -6,16 +6,16 @@
   position: absolute;
   top: 38%;
   left: 18%;
-  color: $color_arrow;
+  color: $color_gold;
   background: none;
   border: none;
   cursor: pointer;
   transition: 0.3s linear;
   &:hover {
-    color: $color_arrow_hover;
+    color: $color_gold_active;
   }
   &:active{
-    color: $color_arrow_active;
+    color: $color_gold_active;
   }
   @include _1170 {
     top: 37%;
@@ -45,7 +45,7 @@
   position: absolute;
   top: 38%;
   right: 20%;
-  color: $color_arrow;
+  color: $color_gold;
   background: none;
   border: none;
   cursor: pointer;
@@ -66,10 +66,10 @@
     right: 11%;
   }
   &:hover {
-    color: $color_arrow_hover;
+    color: $color_gold_active
   }
   &:active{
-    color: $color_arrow_active;
+    color: $color_gold_active;
   }
   &:before {
     content: '\00BB';
