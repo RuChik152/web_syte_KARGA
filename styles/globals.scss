@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Permanent+Marker&family=Rubik+Dirt&family=Rubik+Glitch&family=Syne+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
 @import "mixins";
 //@import "./CustomSlickStyle.module";
 
@@ -18,6 +19,11 @@
 @font-face {
   font-family: 'Monster';
   src: url("../public/fonts/mrsmonster.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Znak Mono';
+  src: url("../public/fonts/znak-mono.ttf") format("truetype");
 }
 
 * {
@@ -46,10 +52,12 @@ body {
 
 body {
   //background: linear-gradient(220deg, rgba(255,255,255,1) 0%, rgba(179,216,233,1) 12%, rgba(70,195,255,1) 26%, rgba(204,238,255,1) 47%, rgba(48,166,236,1) 65%, rgba(23,159,250,1) 78%, rgba(166,219,255,1) 90%, rgba(0,146,255,1) 100%);
-  background-image: url("../public/images/fon.png");
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: cover;
+  //background-image: url("../public/images/fon.png");
+  //background-attachment: fixed;
+  //background-position: center center;
+  //background-size: cover;
+
+  background-color: #000000;
 }
 
 

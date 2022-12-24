@@ -8,9 +8,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #8B2062;
+  background-image: url("../public/images/idea/BG_IDEA.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   .logo__block {
     width: 48%;
     display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: space-evenly;
     @include _768 {
       display: none;
     }
@@ -18,14 +26,25 @@
       width: 61%;
       opacity: 0.8;
     }
+    .logo__block__text {
+      font-family: "Znak Mono";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 7em;
+      line-height: 156px;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      display: inline-block;
+      height: 0px;
+    }
   }
   .form__wrapper {
-    background-color: #b3b3b342;
+    //background-color: rgba(255, 255, 255, 0.26);
     width: 34vw;
     height: 67vh;
     border: none;
     border-radius: 4px;
-    box-shadow: 0px 0px 18px 0px rgb(0 0 0 / 12%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,11 +56,22 @@
     @include _516 {
       width: 85vw;
     }
+    .tittle {
+      .tittle__text {
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 23px;
+        line-height: 47px;
+        color: #FFFFFF;
+      }
+    }
     .mail {
-      position: absolute;
-      top: 2%;
-      right: 3%;
-      font-size: 1rem;
+      //position: absolute;
+      //top: 2%;
+      //right: 3%;
+      //font-size: 1rem;
+      font-family: 'Raleway';
     }
     .form {
       display: flex;
@@ -56,37 +86,59 @@
         }
       }
       .input {
-        width: 68%;
+        width: 100%;
         height: 47px;
         border: none;
         outline: none;
-        border-radius: 4px;
-        padding: 14px;
-        color: #396e5c;
-        background: #ffffffbd;
+        color: white;
         transition: 0.4s linear;
+        background: none;
+        border-bottom: 1px solid white;
         &::placeholder {
-          opacity: 0.4;
-        }
-        &:focus {
-          box-shadow: inset 0px 0px 4px 3px rgb(0 0 0 / 20%);
-        }
-        &:hover {
-          box-shadow: inset 0px 0px 6px 3px rgb(0 0 0 / 48%);
+          color: rgb(255, 255, 255);
         }
       }
       .textarea {
         height: 27vh;
       }
-      .btn {
-        padding: 1%;
-        border-radius: 4px;
-        border: none;
-        font-size: 15px;
-        margin: 7px 0 0 0;
-        width: 23%;
-        height: 11%;
+      .box__send {
+        display: flex;
+        align-items: center;
+        margin-top: 48px;
+        .check__container{
+          cursor: pointer;
+          .container__checkbox {
+            opacity: 0;
+            position: absolute;
+            top: 0px;
+          }
+          .container__title {
+            display: inline-flex;
+            align-items: center;
+            user-select: none;
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            margin: 0 8px 0 8px;
+          }
+          .check_item {
+            opacity: 0;
+          }
+          .check_item__active {
+            opacity: 1;
+          }
+        }
+        .btn {
+          background: none;
+          border: none;
+          cursor: pointer;
+        }
       }
+
     }
   }
 }
@@ -109,6 +161,23 @@
   animation-timing-function: linear;
 }
 
+
+.label {
+  display: flex;
+  align-items: center;
+}
+
+.arrow__btn {
+  stroke:#F1A738;
+  width: 85px;
+  height: 85px;
+}
+.arrow__btn__check {
+  stroke: #915b08;
+  width: 85px;
+  height: 85px;
+}
+
 @keyframes rotation {
   0% {
     transform: rotate(0deg);
@@ -126,3 +195,4 @@
     transform: rotate(0deg);
   }
 }
+

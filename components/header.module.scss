@@ -2,8 +2,9 @@
 
 .header {
   width: 100%;
+  height: 86px;
   margin: 0px auto 0 auto;
-  padding: 20px 0 0 0;
+  //padding: 20px 0 0 0;
   position: fixed;
   //position: sticky;
   z-index: 4;
@@ -13,10 +14,15 @@
   @include _768 {
     padding: 0px 0 0 0;
   }
+  .sticky__logo {
+    transition: 0.5s ease-in-out;
+    width: 100%;
+  }
 }
 
 .sticky {
   width: 100%;
+  height: 46px;
   margin: 0px auto 0 auto;
   padding: 0 0 0 0;
   position: fixed;
@@ -24,6 +30,17 @@
   top: 0;
   background-color: #30303699;
   transition: 0.5s ease-in-out;
+  .sticky__logo {
+    transition: 0.5s ease-in-out;
+    width: 45%;
+    height: 100%;
+  }
+  .navmenu {
+    .navmenu__list {
+      transition: 0.5s ease-in-out;
+      height: 46px;
+    }
+  }
 }
 
 .bg_video {
@@ -47,6 +64,9 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    transition: 0.5s ease-in-out;
+    height: 86px;
+    margin: 0;
     @include _768 {
       display: none;
       flex-direction: column;
@@ -56,27 +76,52 @@
       margin-left: 20px;
       text-transform: uppercase;
       font-weight: 600;
-      color: aliceblue;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      height: 100%;
+      padding: 0 4px 0 4px;
+      justify-content: center;
       &:before {
         content: "";
         display: block;
-        background-color: antiquewhite;
-        border: 1px solid rgba(236, 0, 0, 0);
-        position: relative;
-        top: 22px;
-        left: 1px;
-        width: 0px;
+        background-image: url("../public/images/header/active_link.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0;
+        position: absolute;
+        height: 80px;
+        width: 100%;
         transition: 1s ease-in-out;
       }
       &:hover:before{
-        width: 100%;
-        border: 1px solid #ec0000;
+        opacity: 0.5;
       }
       @include _768 {
         font-size: 26px;
         margin-left: -40px;
       }
+      li {
+        font-family: 'Raleway';
+        color: #F1A738;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 7px;
+      }
 
+    }
+    .list__item__active {
+        &:before {
+          //background-color: chocolate;
+          background-image: url("../public/images/header/active_link.png");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          width: 100%;
+          opacity: 1;
+          height: 100%;
+        }
     }
   }
 

@@ -3,13 +3,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0 0 3% 0;
   color: #ffffff;
+  background-color: #8B2062;
+  padding: 0 0 2% 0;
   .copyright {
     display: flex;
     flex: 1;
     padding: 1% 0;
-    border-top: 1px solid #eaeaea;
     justify-content: center;
     align-items: center;
     a {
@@ -26,32 +26,35 @@
     }
     .copyright__text {
       font-size: 20px;
+      font-family: 'Znak Mono';
     }
   }
   .btn__contact {
     display: block;
     border: 2px solid #ffffff;
-    border-radius: 15px;
+    border-radius: 3px;
     font-size: 1.3em;
     padding: 9px;
     color: #ffffff;
     transition: 0.5s linear;
+    font-family: 'Znak Mono';
     &:hover {
-      border: 2px solid #cb0f0082;
-      color: #ab0d0082;
+      border: 2px solid #f1a738;
+      color: #f1a738;
     }
   }
   .docs {
     display: flex;
-    margin: 5% 0 0 0;
+    margin: 2% 0 0 0;
     .docs__link {
       margin: 0 0% 0 0%;
       display: block;
       width: 131px;
       text-align: center;
       transition: 1s linear;
+      font-family: 'Znak Mono';
       &:hover {
-        color: #ab0d0082;
+        color: #f1a738;
       }
     }
   }

@@ -3,8 +3,8 @@
 .main {
   //background: linear-gradient(90deg, rgba(224,198,225,1) 0%, rgba(198,172,178,1) 50%, rgba(149,152,201,1) 100%);
   //background-image: url("/public/images/bg.JPG");
-  background-image: url("/public/images/bg.JPG");
-  padding: 0 3rem 3rem 3rem;
+  //background-image: url("../images/BG_DESCRIPTION.png");
+  //padding: 0 3rem 3rem 3rem;
   position: relative;
   z-index: 1;
   display: flex;
@@ -12,32 +12,50 @@
   align-items: center;
   overflow: hidden;
   .tittle {
+    //font-weight: 400;
+    //font-size: 2.625em;
+    //line-height: 1.143;
+    //position: relative;
+    //text-align: center;
+    //color: black;
+    //margin-top: 11%;
+    //text-transform: uppercase;
+    font-family: 'Znak Mono';
+    font-style: normal;
     font-weight: 400;
-    font-size: 2.625em;
-    line-height: 1.143;
-    position: relative;
+    font-size: 4em;
     text-align: center;
-    color: black;
-    margin-top: 11%;
-    text-transform: uppercase;
-    @include _480 {
-      font-size: 29px;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+    width: 78vw;
+    line-height: 101px;
+    @include _768 {
+      font-size: 8vw;
+      line-height: 10vw;
     }
   }
   .desc {
-    font-size: 27px;
-    line-height: 1.5;
-    color: #2c2c2c;
-    text-transform: capitalize;
-    position: relative;
+    //font-size: 27px;
+    //line-height: 1.5;
+    //color: #2c2c2c;
+    //text-transform: capitalize;
+    //position: relative;
+    //text-align: center;
+    //width: 60%;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120%;
     text-align: center;
-    width: 60%;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    width: 80vw;
     @include _480 {
       font-size: 17px;
-      width: 100%;
+      width: 70%;
     }
   }
-
 }
 
 .text {
@@ -112,7 +130,7 @@
   flex-wrap: wrap;
   padding: 2% 5% 2% 5%;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
   align-content: center;
   @include _1170 {
     flex-direction: column;
@@ -143,6 +161,15 @@
   .container__btn{
 
   }
+}
+
+.box__tittle {
+  width: 100vw;
+  height: 69vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 //.preview__screenshots {
