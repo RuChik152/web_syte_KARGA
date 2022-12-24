@@ -11,13 +11,11 @@ const Modal = (props: any) => {
         setScreenHeight(window.innerHeight + 25)
     }
 
-
-
     useEffect(() => {
+
         setScreenWidth(window.innerWidth)
         setScreenHeight(window.innerHeight + 30)
         window.addEventListener('resize', resizeScreen);
-
     },[])
 
 
