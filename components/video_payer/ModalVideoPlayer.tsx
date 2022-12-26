@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import videojs, {VideoJsPlayerOptions} from 'video.js';
+import videojs from 'video.js';
 import VideoPlayer from "./videoPlayer";
 import style from "./ModalVideo.module.scss"
 import cn from "classnames";
