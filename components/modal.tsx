@@ -1,6 +1,7 @@
 import style from "./modal.module.scss";
 import {useEffect, useState} from "react";
 import cn from "classnames";
+import ModalVideoPlayer from "./video_payer/ModalVideoPlayer";
 
 const Modal = (props: any) => {
     const [screenWidth, setScreenWidth] = useState(0)

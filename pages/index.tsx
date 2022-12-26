@@ -7,6 +7,8 @@ import Fund_us from "../components/home/fund_us";
 //import bg_logo from "../public/images/bg_blur.gif";
 import bg_logo from "../public/images/BG_MAIN_2.png";
 import Sliders from "../components/sliders/MySlaider/Sliders";
+import Sliders_v2 from "../components/sliders/MySlaider_v2/Sliders";
+import ModalVideoPlayer from "../components/video_payer/ModalVideoPlayer";
 
 export default function Home() {
     const styled = {
@@ -27,7 +29,8 @@ export default function Home() {
 
   return (
     <div  className={styles.container}>
-        <Modal onClose={() => setShow(false)} show={show}/>
+        {/*<Modal onClose={() => setShow(false)} show={show}/>*/}
+        <ModalVideoPlayer onClose={() => setShow(false)} show={show} />
         <main style={styled} className={styles.main}>
             <div className={styles.infoblock}>
                 <div className={styles.title}>
@@ -79,6 +82,7 @@ export default function Home() {
         <div id="screenshot" className={styles.screenshots__wrapper}>
             <h2 className={styles.screenshots__wrapper__text}>screenshots</h2>
             <Sliders/>
+            {/*<Sliders_v2/>*/}
         </div>
 
         <Fund_us/>
