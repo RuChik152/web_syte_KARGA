@@ -4,8 +4,8 @@ import Description from "../components/home/description";
 import React, {useState} from "react";
 import Modal from "../components/modal";
 import Fund_us from "../components/home/fund_us";
-//import bg_logo from "../public/images/bg_blur.gif";
-import bg_logo from "../public/images/BG_MAIN_2.png";
+import bg_logo from "../public/images/other/bg_blur.gif";
+//import bg_logo from "../public/images/BG_MAIN_2.png";
 import Sliders from "../components/sliders/MySlaider/Sliders";
 import Sliders_v2 from "../components/sliders/MySlaider_v2/Sliders";
 import ModalVideoPlayer from "../components/video_payer/ModalVideoPlayer";
@@ -77,8 +77,11 @@ export default function Home() {
 
             </div>
         </main>
-            <div className={styles.bg}></div>
-            <Description/>
+        {/*<div className={styles.bg}>*/}
+        {/*    <Image className={styles.bg__img} src="/images/other/hr.png" width={1920} height={405} alt="icon"/>*/}
+        {/*</div>*/}
+        {/*<Image className={styles.bg__img} src="/images/other/hr.png" width={1920} height={20} alt="icon"/>*/}
+        <Description/>
         <div id="screenshot" className={styles.screenshots__wrapper}>
             <h2 className={styles.screenshots__wrapper__text}>screenshots</h2>
             <Sliders/>

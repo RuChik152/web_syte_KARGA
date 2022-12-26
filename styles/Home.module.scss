@@ -375,3 +375,18 @@
     }
   }
 }
+
+.bg {
+  //background-image: url("../public/images/other/hr.png");
+  position: relative;
+  height: 23px;
+  z-index: 10;
+  top: -62px;
+  .bg__img {
+    width: 100vw;
+    height: 26vh;
+    position: absolute;
+    z-index: 2;
+  }
+
+}

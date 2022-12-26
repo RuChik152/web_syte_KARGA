@@ -9,6 +9,25 @@
   justify-content: center;
   .wrapper {
     width: 100%;
+  }
+}
 
+.modal__btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+}
+
+.modal__btn__desktop {
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  font-size: 2em;
+  color: #ffffff85;
+  transition: 0.4s linear;
+  &:hover {
+    color: #ffffffb5;
   }
 }

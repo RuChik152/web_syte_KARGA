@@ -59,14 +59,14 @@
       display: flex;
       margin: 0 auto;
       padding: 0;
-      //@include _1170 {
-      //  width: 84vh;
-      //  height: 84vh;
-      //}
-      //@include _979 {
-      //  width: 90vw;
-      //  height: 90vw;
-      //}
+      @include _1170 {
+        width: 84vh;
+        height: 84vh;
+      }
+      @include _979 {
+        width: 90vw;
+        height: 90vw;
+      }
       .item__img{
         .img {
           width: 90vh;

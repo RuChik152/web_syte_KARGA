@@ -1,10 +1,15 @@
 import React from 'react';
-import videojs from 'video.js';
+import videojs, {VideoJsPlayerOptions} from 'video.js';
 import 'video.js/dist/video-js.css';
 
-export const VideoPlayer = (props) => {
-    const videoRef = React.useRef(null);
-    const playerRef = React.useRef(null);
+interface VideoPLayerProps {
+    onReady: (arg: any) => void,
+    options: VideoJsPlayerOptions;
+}
+
+export const VideoPlayer = (props: VideoPLayerProps) => {
+    const videoRef: any = React.useRef(null);
+    const playerRef: any = React.useRef(null);
     const {options, onReady} = props;
 
     React.useEffect(() => {

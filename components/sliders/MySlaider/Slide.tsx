@@ -46,6 +46,9 @@ const Slide = () => {
         setWidthAdaptive(window.screen.width);
         setHeightAdaptive(window.screen.height);
         if(typeof widthAdaptive === "number" && typeof heightAdaptive === "number") {
+            console.log('widthAdaptive', widthAdaptive)
+            console.log('heightAdaptive', heightAdaptive)
+            console.log('widthAdaptive > heightAdaptive', widthAdaptive > heightAdaptive)
             if(widthAdaptive > heightAdaptive) {
                 setDiff(true)
             }
@@ -121,7 +124,7 @@ const Slide = () => {
 
     return (
         <div className={style.container}>
-            <div style={ diff ? { width: configAdaptive.ifWidthMoreHeight.width } : { width: configAdaptive.ifWidthLessHeight.width} } className={style.wrapper}>
+            <div style={ diff ? configAdaptive.ifWidthMoreHeight : configAdaptive.ifWidthLessHeight } className={style.wrapper}>
                 <button className={style.close__btn} onClick={close}>
                     <svg className={style.close__btn__img} width="20" height="20" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0318 2.14347L7.78917 6.38611L12.0318 10.6287L10.6176 12.043L6.37496 7.80032L2.13232 12.043L0.718104 10.6287L4.96075 6.38611L0.718104 2.14347L2.13232 0.729254L6.37496 4.97189L10.6176 0.729254L12.0318 2.14347Z" fill="#F1A738"/>
@@ -135,7 +138,18 @@ const Slide = () => {
                     {
                         list.map((el, index) => {
                             if(index !== slide){
-                                return <li className={style.item__img} key={index}><Image unoptimized={true} loading={"lazy"}   className={style.img} src={list[index].src} alt="icon" width={img_params.width} height={img_params.height}/></li>
+                                return <li className={style.item__img} key={index}>
+                                    <Image
+                                        unoptimized={true}
+                                        loading={"lazy"}
+                                        className={style.img}
+                                        src={list[index].src}
+                                        alt="icon"
+                                        width={img_params.width}
+                                        height={img_params.height}
+                                        style={ diff ? configAdaptive.ifWidthMoreHeight : configAdaptive.ifWidthLessHeight }
+                                    />
+                                </li>
 
                             }
                         })
