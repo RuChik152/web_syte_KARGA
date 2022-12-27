@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-//@ts-ignore
 import videojs from "video.js";
 import VideoPlayer from "./videoPlayer";
 import style from "./ModalVideo.module.scss"
@@ -32,7 +31,7 @@ const ModalVideoPlayer = (props: any) => {
 
     //TODO TypeScript
     const videoJsOptions: any = {
-        autoplay: 'play',
+        autoplay: 'muted',
         loop: true,
         preload: 'true',
         controls: true,
@@ -48,7 +47,6 @@ const ModalVideoPlayer = (props: any) => {
     const handlePlayerReady = (player: any) : void => {
         playerRef.current = player;
 
-        // You can handle player events here, for example:
         player.on('waiting', () => {
             videojs.log('player is waiting');
         });
