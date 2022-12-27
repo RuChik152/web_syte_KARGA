@@ -9,6 +9,7 @@ import bg_logo from "../public/images/other/bg_blur.gif";
 import Sliders from "../components/sliders/MySlaider/Sliders";
 import Sliders_v2 from "../components/sliders/MySlaider_v2/Sliders";
 import ModalVideoPlayer from "../components/video_payer/ModalVideoPlayer";
+import VideoBanner from "../components/video_banner/videoBanner";
 
 export default function Home() {
     const styled = {
@@ -30,8 +31,9 @@ export default function Home() {
   return (
     <div  className={styles.container}>
         {/*<Modal onClose={() => setShow(false)} show={show}/>*/}
+        <VideoBanner/>
         <ModalVideoPlayer onClose={() => setShow(false)} show={show} />
-        <main style={styled} className={styles.main}>
+        <main  className={styles.main}>
             <div className={styles.infoblock}>
                 <div className={styles.title}>
                     <h1 className={styles.title__first}>
