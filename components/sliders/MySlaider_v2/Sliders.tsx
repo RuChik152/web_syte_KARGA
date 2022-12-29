@@ -34,7 +34,7 @@ export const initList = [
     },
     {
         id: 5,
-        src: '/images/desc/demo5.jpg'
+        src: '/images/desc/tech_5.jpg'
     },
 ]
 
