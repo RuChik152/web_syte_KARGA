@@ -37,7 +37,7 @@ export default function Home() {
             <div className={styles.infoblock}>
                 <div className={styles.title}>
                     <h1 className={styles.title__first}>
-                        <Image className={styles.title__first__img} src="/images/karga.svg" alt="karga_icon" width={740} height={261}/>
+                        <Image className={styles.title__first__img} src="/images/karga.svg" alt="karga" width={740} height={261}/>
                     </h1>
                     <p className={styles.title__second}>new fairytale shooter</p>
                     <div className={styles.wrapper__btn}>

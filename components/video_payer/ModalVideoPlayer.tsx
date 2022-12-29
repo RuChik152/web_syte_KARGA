@@ -31,7 +31,7 @@ const ModalVideoPlayer = (props: any) => {
 
     //TODO TypeScript
     const videoJsOptions: any = {
-        autoplay: 'muted',
+        muted: true,
         loop: true,
         preload: 'true',
         controls: true,
