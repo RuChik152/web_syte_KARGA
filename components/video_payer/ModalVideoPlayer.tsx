@@ -63,9 +63,9 @@ const ModalVideoPlayer = (props: any) => {
 
     return (
         <div className={style.main}>
-            <div style={ diff ? {width: '87vw' } : { width: '100%' }} className={style.wrapper}>
+            <div style={ diff ? { width: '87vw', height: '91%' } : { width: '100%' }} className={style.wrapper}>
                 {/*<VideoPlayer options={videoJsOptions} onReady={handlePlayerReady}/>*/}
-                <iframe style={{width: '100%', height: '90vh'}} src = "https://www.youtube.com/embed/vhZKBESXmxo" title = "YouTube video player" frameBorder = "0" allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                <iframe style={diff ? { width: '100%', height: '100%'} : { width: '100%', height: '41vh'}} src = "https://www.youtube.com/embed/vhZKBESXmxo" title = "YouTube video player" frameBorder = "0" allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             </div>
             <button className={cn([`${style.modal__btn} ${style.modal__btn__desktop}`])} onClick={props.onClose}>
                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
