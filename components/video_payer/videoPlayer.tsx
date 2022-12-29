@@ -15,6 +15,7 @@ export const VideoPlayer = (props: VideoPLayerProps) => {
     React.useEffect(() => {
 
 
+
         if (!playerRef.current) {
 
             const videoElement = document.createElement("video-js");
