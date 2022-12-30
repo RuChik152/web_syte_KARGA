@@ -6,6 +6,7 @@ import cn from "classnames";
 
 import Plyr from "plyr-react";
 import "plyr-react/plyr.css"
+import Link from "next/link";
 
 const plyrProps = {
     source: {
@@ -15,6 +16,16 @@ const plyrProps = {
                 src: 'vhZKBESXmxo',
                 provider: 'youtube',
             },
+            // {
+            //     src: '/video/teaser_master.mp4',
+            //     provider: 'html5',
+            //     size: 720
+            // },
+            // {
+            //     src: '/video/teaser_master.mp4',
+            //     provider: 'html5',
+            //     size: 1080
+            // },
         ],
     } ,
     options: {
@@ -90,6 +101,10 @@ const ModalVideoPlayer = (props: any) => {
         <div className={style.main}>
             {/*<div style={ diff ? { width: '87vw', height: '91%' } : { width: '100%' }} className={style.wrapper}>*/}
             <div style={ diff ? { width: '87vw' } : { width: '100%' }} className={style.wrapper}>
+
+                <div>
+                    <Link href="https://ya.ru">X</Link>
+                </div>
                 {/*@ts-ignore*/}
                 <Plyr {...plyrProps} />
                 {/*//TODO */}
