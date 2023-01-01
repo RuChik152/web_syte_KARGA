@@ -2,22 +2,13 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import Description from "../components/home/description";
 import React, {useState} from "react";
-import Modal from "../components/modal";
 import Fund_us from "../components/home/fund_us";
-import bg_logo from "../public/images/other/bg_blur.gif";
 //import bg_logo from "../public/images/BG_MAIN_2.png";
 import Sliders from "../components/sliders/MySlaider/Sliders";
-import Sliders_v2 from "../components/sliders/MySlaider_v2/Sliders";
 import ModalVideoPlayer from "../components/video_payer/ModalVideoPlayer";
 import VideoBanner from "../components/video_banner/videoBanner";
 
 export default function Home() {
-    const styled = {
-        backgroundImage: `url(${bg_logo.src})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center center'
-    }
 
   const [show, setShow] = useState(false)
 
