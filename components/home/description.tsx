@@ -47,10 +47,10 @@ const Description = () => {
                 {/*<h2 className={style.tittle}>Just start <em>playing</em> and <em>find</em> out my secret</h2>*/}
                 {/*<p className={style.desc}>We are &apos;BELIVR&apos; - a young game&apos;s developer. We present our first project and enter the gaming industry with the fantasy VR shooter &apos;Karga&apos;</p>*/}
                 <div className={style.bullet__container}>
-                    <Bullet src="/images/bullet/new/elements.png" name={bulletText[0].name} text={bulletText[0].text} width={styleConfig.width} height={styleConfig.height} color={styleConfig.color}/>
-                    <Bullet src="/images/bullet/new/hero.png" name={bulletText[1].name} text={bulletText[1].text} width={styleConfig.width} height={styleConfig.height}/>
-                    <Bullet src="/images/bullet/new/witch-transformed.png" name={bulletText[2].name} text={bulletText[2].text} width={styleConfig.width} height={styleConfig.height} color={styleConfig.color}/>
-                    <Bullet src="/images/bullet/new/skeleton-transformed.png" name={bulletText[3].name} text={bulletText[3].text} width={styleConfig.width} height={styleConfig.height} color={styleConfig.color}/>
+                    <Bullet src="/images/bullet/mini/elements.png" name={bulletText[0].name} text={bulletText[0].text} width={styleConfig.width} height={styleConfig.height} color={styleConfig.color}/>
+                    <Bullet src="/images/bullet/mini/hero.png" name={bulletText[1].name} text={bulletText[1].text} width={styleConfig.width} height={styleConfig.height}/>
+                    <Bullet src="/images/bullet/mini/witch-transformed.png" name={bulletText[2].name} text={bulletText[2].text} width={styleConfig.width} height={styleConfig.height} color={styleConfig.color}/>
+                    <Bullet src="/images/bullet/mini/skeleton-transformed.png" name={bulletText[3].name} text={bulletText[3].text} width={styleConfig.width} height={styleConfig.height} color={styleConfig.color}/>
                 </div>
             </div>
 
