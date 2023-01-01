@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import videojs, {VideoJsPlayerOptions} from 'video.js';
 import 'video.js/dist/video-js.css';
 
@@ -6,14 +6,13 @@ interface VideoPLayerProps {
     onReady: (arg: any) => void,
     options: VideoJsPlayerOptions;
 }
-
+//TODO Удалить компонент в будущем, если не будет использоваться
 export const VideoPlayer = (props: VideoPLayerProps) => {
     const videoRef: any = React.useRef(null);
     const playerRef: any = React.useRef(null);
     const {options, onReady} = props;
 
-    React.useEffect(() => {
-
+    useEffect(() => {
 
         if (!playerRef.current) {
 
@@ -37,9 +36,8 @@ export const VideoPlayer = (props: VideoPLayerProps) => {
     }, [options, videoRef]);
 
 
-    React.useEffect(() => {
+    useEffect(() => {
         const player = playerRef.current;
-
         return () => {
             if (player && !player.isDisposed()) {
                 player.dispose();

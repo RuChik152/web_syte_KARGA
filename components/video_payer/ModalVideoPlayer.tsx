@@ -1,11 +1,43 @@
 import React, {useEffect, useState} from 'react';
-import videojs from "video.js";
-import VideoPlayer from "./videoPlayer";
 import style from "./ModalVideo.module.scss"
 import cn from "classnames";
+import Plyr from "plyr-react";
+import "plyr-react/plyr.css"
+import Link from "next/link";
+
+const plyrProps = {
+    source: {
+        type: 'video',
+        sources: [
+            {
+                src: 'vhZKBESXmxo',
+                provider: 'youtube',
+            },
+            //TODO Пример использования без Ютуба
+            // {
+            //     src: '/video/teaser_master.mp4',
+            //     provider: 'html5',
+            //     size: 720
+            // },
+            // {
+            //     src: '/video/teaser_master.mp4',
+            //     provider: 'html5',
+            //     size: 1080
+            // },
+        ],
+    } ,
+    options: {
+        controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'settings', 'pip', 'airplay', 'fullscreen'],
+        enabled: true,
+        title: "TEST",
+        resetOnEnd: true,
+        youtube: {
+            controls: 0,
+        }
+    },
+}
 
 const ModalVideoPlayer = (props: any) => {
-    const playerRef = React.useRef(null);
 
     const [widthAdaptive, setWidthAdaptive] = useState<number | null>(null)
     const [heightAdaptive, setHeightAdaptive] = useState<number | null>(null)
@@ -29,42 +61,19 @@ const ModalVideoPlayer = (props: any) => {
         window.addEventListener('resize', checkResizeWindow)
     })
 
-    //TODO TypeScript
-    const videoJsOptions: any = {
-        autoplay: 'muted',
-        loop: true,
-        preload: 'true',
-        controls: true,
-        responsive: true,
-        fluid: true,
-        playbackRates: [0.5, 1, 1.5, 2],
-        sources: [{
-            src: '/video/teaser_master.mp4',
-            type: 'video/mp4'
-        }]
-    };
-
-    const handlePlayerReady = (player: any) : void => {
-        playerRef.current = player;
-
-        player.on('waiting', () => {
-            videojs.log('player is waiting');
-        });
-
-        player.on('dispose', () => {
-            videojs.log('player will dispose');
-        });
-    };
 
     if(!props.show) {
         return null
     }
 
-
     return (
         <div className={style.main}>
-            <div style={ diff ? {width: '87vw' } : { width: '100%' }} className={style.wrapper}>
-                <VideoPlayer options={videoJsOptions} onReady={handlePlayerReady}/>
+            <div style={ diff ? { width: '87vw' } : { width: '100%' }} className={style.wrapper}>
+                <div>
+                    <Link href="https://ya.ru">X</Link>
+                </div>
+                {/*@ts-ignore*/}
+                <Plyr {...plyrProps} />
             </div>
             <button className={cn([`${style.modal__btn} ${style.modal__btn__desktop}`])} onClick={props.onClose}>
                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">

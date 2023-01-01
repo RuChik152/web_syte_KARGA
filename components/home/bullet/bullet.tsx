@@ -28,7 +28,7 @@ const Bullet = (props: BulletProps) : JSX.Element => {
 
     return (
         <div className={style.main}>
-            <Image unoptimized={true} loading={"lazy"}  className={style.main__img} src={config.src} width={config.width} height={config.height} alt="image_bullet"/>
+            <Image unoptimized={true} className={style.main__img} src={config.src} width={config.width} height={config.height} alt="image_bullet"/>
             <p style={config.styleText} className={style.main__name}>{config.name}</p>
             <p className={style.main__text}>{config.text}</p>
         </div>

@@ -46,9 +46,6 @@ const Slide = () => {
         setWidthAdaptive(window.screen.width);
         setHeightAdaptive(window.screen.height);
         if(typeof widthAdaptive === "number" && typeof heightAdaptive === "number") {
-            console.log('widthAdaptive', widthAdaptive)
-            console.log('heightAdaptive', heightAdaptive)
-            console.log('widthAdaptive > heightAdaptive', widthAdaptive > heightAdaptive)
             if(widthAdaptive > heightAdaptive) {
                 setDiff(true)
             }
