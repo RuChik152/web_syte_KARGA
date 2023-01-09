@@ -2,19 +2,13 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import Description from "../components/home/description";
 import React, {useState} from "react";
-import Modal from "../components/modal";
 import Fund_us from "../components/home/fund_us";
-//import bg_logo from "../public/images/bg_blur.gif";
-import bg_logo from "../public/images/BG_MAIN_2.png";
+//import bg_logo from "../public/images/BG_MAIN_2.png";
 import Sliders from "../components/sliders/MySlaider/Sliders";
+import ModalVideoPlayer from "../components/video_payer/ModalVideoPlayer";
+import VideoBanner from "../components/video_banner/videoBanner";
 
 export default function Home() {
-    const styled = {
-        backgroundImage: `url(${bg_logo.src})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center center'
-    }
 
   const [show, setShow] = useState(false)
 
@@ -27,12 +21,14 @@ export default function Home() {
 
   return (
     <div  className={styles.container}>
-        <Modal onClose={() => setShow(false)} show={show}/>
-        <main style={styled} className={styles.main}>
+        {/*<Modal onClose={() => setShow(false)} show={show}/>*/}
+        <VideoBanner/>
+        <ModalVideoPlayer onClose={() => setShow(false)} show={show} />
+        <main  className={styles.main}>
             <div className={styles.infoblock}>
                 <div className={styles.title}>
                     <h1 className={styles.title__first}>
-                        <Image className={styles.title__first__img} src="/images/karga.svg" alt="karga_icon" width={740} height={261}/>
+                        <Image className={styles.title__first__img} src="/images/karga.svg" alt="karga" width={740} height={261}/>
                     </h1>
                     <p className={styles.title__second}>new fairytale shooter</p>
                     <div className={styles.wrapper__btn}>
@@ -74,11 +70,15 @@ export default function Home() {
 
             </div>
         </main>
-            <div className={styles.bg}></div>
-            <Description/>
+        {/*<div className={styles.bg}>*/}
+        {/*    <Image className={styles.bg__img} src="/images/other/hr.png" width={1920} height={405} alt="icon"/>*/}
+        {/*</div>*/}
+        {/*<Image className={styles.bg__img} src="/images/other/hr.png" width={1920} height={20} alt="icon"/>*/}
+        <Description/>
         <div id="screenshot" className={styles.screenshots__wrapper}>
             <h2 className={styles.screenshots__wrapper__text}>screenshots</h2>
             <Sliders/>
+            {/*<Sliders_v2/>*/}
         </div>
 
         <Fund_us/>

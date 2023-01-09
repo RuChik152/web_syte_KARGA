@@ -1,11 +1,16 @@
 @import "../../../styles/mixins";
 @import "../../../styles/variables";
 
+.main {
+  @include _800 {
+    display: none;
+  }
+}
 
 .up {
   position: absolute;
   top: 38%;
-  left: 18%;
+  left: 1vw;
   color: $color_gold;
   background: none;
   border: none;
@@ -13,21 +18,23 @@
   transition: 0.3s linear;
   &:hover {
     color: $color_gold_active;
+    opacity: 0.7;
   }
   &:active{
     color: $color_gold_active;
+    opacity: 0.7;
   }
   @include _1170 {
     top: 37%;
-    left: 9%;
+    //left: 9%;
   }
   @include _768 {
     top: 34%;
-    left: 3%;
+    //left: 3%;
   }
   @include _516 {
     top: 30%;
-    left: 1%;
+    //left: 1%;
   }
   @include _350 {
     left: -2%;
@@ -44,7 +51,7 @@
 .down {
   position: absolute;
   top: 38%;
-  right: 20%;
+  right: 4vw;
   color: $color_gold;
   background: none;
   border: none;
@@ -52,18 +59,18 @@
   transition: 0.3s linear;
   @include _1170 {
     top: 37%;
-    right: 15%;
+    //right: 15%;
   }
   @include _768 {
     top: 34%;
-    right: 9%;
+    //right: 9%;
   }
   @include _516 {
     top: 30%;
-    right: 8%;
+    //right: 8%;
   }
   @include _350 {
-    right: 11%;
+    //right: 11%;
   }
   &:hover {
     color: $color_gold_active
